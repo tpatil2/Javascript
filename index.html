@@ -12,13 +12,36 @@
 </head>
 
 <body>
-    <button id="mybutton"> click me </button>
+    
+    <input id="myinput" type="text" value="default"/>
+    <button id="change"> Change Text </button>
+    <div id="firstdiv">This is initial text</div>
     
     <script type="text/javascript">
-        document.getElementById("mybutton").onclick=function(){
-            alert("Yes you clicked");
+        
+        var divid=document.getElementById("myinput").value;
+        
+        var myarr=new Array();
+        
+        myarr[0]="pizza";
+        myarr[1]="coffee";
+        
+        
+        myotherarray=["a","b","c"];
+        myotherarray.push("d"); // push at the end
+        myotherarray.splice(1,0,"add");//add at first index
+        myotherarray.splice(1,2);//remove two elements fron index 1
+        myotherarray.splice(1,0,"1","2","3");//add at 1 index anf so on
+        console.log(myotherarray);
+
+
+        document.getElementById("change").onclick=function(){
+            
+            divid=document.getElementById("myinput").value;
+            document.getElementById("firstdiv").innerHTML=myarr[1];
         }
     </script>
     
 </body>
 </html>
+ 
